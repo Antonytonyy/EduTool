@@ -63,15 +63,13 @@ def print_tab(tab):  # Définition de la fonction pour afficher un tableau de ma
 def initialisation():
     global F_files
     def fermeture_fenetre():# Définition de la fonction de fermeture de fenêtre
-        """
         # Vérification si le fichier de partage existe, et suppression s'il est présent
         if os.path.exists(chemin_partage+"/Partage"+"/partage "+nom_prof +".txt"):
             os.remove(chemin_partage+"/Partage"+"/partage "+nom_prof +".txt")
         # Vérification si le fichier de QCM existe, et suppression s'il est présent
         if os.path.exists(chemin_partage+"/QCM/QCM "+nom_prof+ ".txt"):
             os.remove(chemin_partage+"/QCM/QCM "+nom_prof+ ".txt")
-        """
-        print("H2L for ever")
+        print("Fermeture")
     def fin_partage():# renitialise le paratage
         # Vérification si le fichier de partage existe, et suppression s'il est présent
         if os.path.exists(chemin_partage+"/Partage"+"/partage "+nom_prof +".txt"):
