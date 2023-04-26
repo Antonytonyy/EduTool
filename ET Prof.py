@@ -17,8 +17,6 @@ chemin_partage="I:/public/ET"
 
 prof="I:/public/ET/prof.txt"
 
-chemin_local="C:/Users/"+getpass.getuser()
-
 nom_prof = getpass.getuser()
 
 
@@ -66,8 +64,7 @@ def initialisation():
         # Vérification si le fichier de partage existe, et suppression s'il est présent
         if os.path.exists(chemin_partage+"/Partage"+"/partage "+nom_prof +".txt"):
             os.remove(chemin_partage+"/Partage"+"/partage "+nom_prof +".txt")
-        # Vérification si le fichier de QCM existe, et suppression s'il est présent
-        if os.path.exists(chemin_partage+"/QCM/QCM "+nom_prof+ ".txt"):
+        if os.path.exists(chemin_partage+"/QCM/QCM "+nom_prof+ ".txt"): # Vérification si le fichier de QCM existe, et suppression s'il est présent
             os.remove(chemin_partage+"/QCM/QCM "+nom_prof+ ".txt")
         print("Fermeture")
     def fin_partage():# renitialise le paratage
