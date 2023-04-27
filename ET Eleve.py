@@ -23,7 +23,6 @@ with open(prof, "r",encoding="utf-8-sig") as fichiern:#ouvre le fichier prof pou
     nom_prof=fichiern.readlines()#stocke chaques lignes du fichier dans une meme liste
     professeur=[i.rstrip() for i in nom_prof]#recrée une liste qui contiendra le nom des profs tout en retirant à chaques lignes le retour à la ligne ("\n")
 
-print(professeur)
 
 def icones_images():#programme qui crée un dictionnaire prenant en entrée l'extension (".ext") et renvoie l'icone approprié
     global images_app
@@ -52,8 +51,8 @@ def affichage_fichier(liste):#prends en entrée une liste de fichier (de leur ch
     def clic(e):#traite l'information de quand un clic est éffectué sur la fenetre
         if focus:#si la souris est sur l'une des cases
             fichier_a_ouvrir =liste[focus-1]# Spécifier le chemin complet du fichier à ouvrir
-            if os.path.exists(fichier_a_ouvrir):# Vérifier si le fichier existe avant de l'ouvrir
-                os.startfile(fichier_a_ouvrir)# Ouvrir le fichier avec l'application par défaut
+            if os.path.exists(Partage+fichier_a_ouvrir):# Vérifier si le fichier existe avant de l'ouvrir
+                os.startfile(Partage+fichier_a_ouvrir)# Ouvrir le fichier avec l'application par défaut
             else:
                 print("Le fichier n'existe pas.")
     def focus_on(e):#défini la case sur laquelle la souris passe
@@ -82,7 +81,7 @@ def affichage_fichier(liste):#prends en entrée une liste de fichier (de leur ch
         if "."+i.split(".")[-1] in images_app.keys():#si l'extension est présent dans le dico des icones d'extenion
             img['image']=images_app["."+i.split(".")[-1]]#affiche l'image
         elif 'unknown' in images_app.keys():#si l'icone d'extension inconnue est présent dans le dico des icones d'extenion
-            img['image']=images_app["unknown"]#affiche l'image
+            img['image']=images_app[".unknown"]#affiche l'image
         img.pack()#le pack
         Frames_files[n].grid(row=n%5,column=1+(n//5)*2,padx=10,pady=10)#le place selon des colonnes de 5
 
@@ -226,14 +225,12 @@ for i in professeur:#pour chaques proffesseurs
             fichiers_partage=file_partage[2:]#la liste des chemin des fichiers partagés
             titre=file_partage[0]#le titre du partage
             eleve=file_partage[1]#le chemin de la liste d'eleve
-        print(eleve,titre)
         eleve_dans_la_classe = False #initialise la présence de l'eleve dans la classe a False
         id = getpass.getuser()#recupere l'identifiant de l'eleve
         with open(eleve,"r",encoding="utf-8-sig") as fichiern :#ouvre la liste d'eleve en question
             liste_eleve=fichiern.readlines()
             liste_eleve=[i.rstrip() for i in liste_eleve]
             eleve_dans_la_classe= id in liste_eleve[2:]#Vrai si l'id de l'eleve est present dans liste des noms sauf les 2 premiers (qui ne sont pas consacrés aux élèves)
-        print(liste_eleve)
         if eleve_dans_la_classe==True:
             root.title(titre)#nomme la fennetre comme le titre du partage
             Partage_Label["text"]=""
@@ -246,10 +243,6 @@ for i in professeur:#pour chaques proffesseurs
         else:
             Partage_Label["text"]="Aucun partage en cours"
 
-
-    print("lol")
-    print(QCM+"QCM "+i+".txt")
-    print(os.path.exists( QCM+"QCM "+i+".txt"))
     if os.path.exists( QCM+"QCM "+i+".txt"):#si le fichier QCM est present
         nb_reponses=0
         QCM_root = tk.Tk()

@@ -227,11 +227,6 @@ def initialisation():
         T_listbox.pack()
         for n,i in enumerate(print_tab(reponses)[0].split("\n")):
             T_listbox.insert(n,i)
-        """
-        T_lab=tk.Label(T_Frame, text=print_tab(reponses), font='TkFixedFont')
-        T_lab.pack(padx=10, pady=10)
-        """
-
 
     def envoi_QCM():
         global titre_QCM
