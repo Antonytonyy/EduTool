@@ -438,7 +438,7 @@ def initialisation():
             if "."+i.split(".")[-1] in images_app.keys():
                 img['image']=images_app["."+i.split(".")[-1]]
             elif '.unknown' in images_app.keys():
-                img['image']=images_app["unknown"]
+                img['image']=images_app[".unknown"]
 
             img.pack()
             Frames_files[n].grid(row=n%5,column=1+(n//5)*2,padx=10,pady=10)
