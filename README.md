@@ -2,7 +2,7 @@
 
 Note : Ce projet a été soumis au concours Trophées NSI
 <br/>
-*Tous les commentaires en italiques comme celui-ci s'adresse pour le jury afin qu'ils puissent effectuer les test de fonctionement*
+*Tous les commentaires en italique comme celui-ci s'adresse pour le jury afin qu'ils puissent effectuer les tests de fonctionement*
 
 Utilisation d'Edu Tool au sein d'établissement scolaire :
 -----------------
@@ -14,11 +14,11 @@ Téléchargement et placement des fichiers :
 -----------------
 Afin d'exécuter le logiciel Edu Tool, il est nécessaire d'avoir pour logiciel d'exploitation Windows.
 <br/>
-Tout d'abord, il vous faudra télécharger le dossier ET sur votre ordinateur, puis le positionner dans l'architecture de votre ordinateur (le dossier ET devra se trouver au sein du lieu où ordinateurs élèves et ordinateurs professeurs).
+Tout d'abord, il vous faudra télécharger le dossier ET sur votre ordinateur, puis le positionner dans l'architecture de votre ordinateur (le dossier ET devra se trouver au sein du lieu auquels les ordinateurs élèves et les ordinateurs professeurs peuvent accéder).
 <br/>
 *Il suffira pour le test de télécharger le dossier ET et de le placer à un endroit quelquonque de votre ordinateur*
 <br/>
-Puis il vous faudra télécharger, les deux fichiers python : ET Eleve.py et ET Prof.py . Il vous faudra les ouvrir dans un logiciel pouvant exécuter les programmes python (Nous vous consellons d'utiliser VSCode ou Pyzo).
+Puis il vous faudra télécharger, les deux fichiers python : ET Eleve.py et ET Prof.py . Il vous faudra les ouvrir dans un logiciel pouvant exécuter les programmes python (Nous vous conseillons d'utiliser VSCode ou Pyzo).
 
 Modules :
 -----------------
@@ -44,11 +44,11 @@ Le fichier prof.txt sera donc comme ceci:
 id_prof_2  
 ...
 
-*Pour ce test, vous pouvez seulement mettre un identifiant de votre choix, cet identifiant sera rappelé dans le fichier prof.py . Il est en fait impossible d'être professeur et élève simultanémant dans ce projet. Le fichier prof.txt devra donc être comme ceci:*
+*Pour ce test, vous pouvez seulement mettre un identifiant de votre choix, cet identifiant sera rappelé dans le fichier prof.py . Il est en fait impossible d'être professeur et élève simultanément dans ce projet. Le fichier prof.txt devra donc être comme ceci:*
 >id_de_votre_choix
 
 
-Le fichier de la liste d'élève doit être composé en première ligne de l’identifiant du professeur, puis une ligne vierge, puis tous les identifiants des élèves de la classe. Il peut y avoir un nombre infini de fichier liste d'élèves, tous pouvant prendre un nom de votre choix, il est envisageable qu'il y ait des listes d'élèves pour chaque classe, pour chaque spécialité... Ces fichiers devront donc prendre cette forme :
+Le fichier de la liste d'élèves doit être composé en première ligne de l’identifiant du professeur, puis une ligne vierge, puis tous les identifiants des élèves de la classe. Il peut y avoir un nombre infini de fichier liste d'élèves, tous pouvant prendre un nom de votre choix, il est envisageable qu'il y ait des listes d'élèves pour chaque classe, pour chaque spécialité... Ces fichiers devront donc prendre cette forme :
 
 >id_prof  
 >  
@@ -61,7 +61,7 @@ id_eleve5
 
 <br/>
 
-*Concernant la liste d’élèves, il vous faudra également en créer une avec en première ligne l’identifiant du professeur que vous avez crée auparavant, puis votre identifiant à la place des identifiants élèves. Pous pouvez soit modifier le fichier existant NSI gr1.txt en ajoutant votre identifiant soit en rajouter un nouveau que vous venez de créer. Votre fichier aura ainsi cette forme:*
+*Concernant la liste d’élèves, il vous faudra également en créer une avec en première ligne l’identifiant du professeur que vous avez créé auparavant, puis votre identifiant à la place des identifiants élèves. Pous pouvez soit modifier le fichier existant NSI gr1.txt en ajoutant votre identifiant soit en rajouter un nouveau que vous venez de créer. Votre fichier aura ainsi cette forme:*
 
 >id_prof_que_vous_avez_créer  
 >  
@@ -70,16 +70,18 @@ id_eleve5
 Modification des chemins dans le code :
 -----------------
 
-Ce code fonctionne sous l'architecture de notre lycée. Or tous les lycées français n'ont pas la même architecture. Quelques modifications s'imposent alors
+Ce code fonctionne sous l'architecture de notre lycée. Or tous les lycées français n'ont pas la même architecture. Quelques modifications s'imposent alors :
 <br/>
 Pour le fichier ET prof.txt : 
 - l16, il faut saisir le chemin absolu du dossier ET (ex: "I:/public/ET")
 - l18, il faut saisir le chemin absolu du fichier prof.txt (ex: "I:/public/ET/prof.txt")
 <br/>
-Pour le fichier ET eleve.txt
+
+Pour le fichier ET eleve.txt : 
 - l11, il faut saisir le chemin absolu pour accéder au fichier prof.txt (ex: "I:/public/ET/prof.txt")
 - l13, il faut saisir le chemin absolu pour accéder au dossier Partage (ex: "I:/public/ET/Partage/")
-- l15, il faut saisir le chemin où seront stockés les fichiers du partage, (il vous vaudra modifier la ligne de code tout en gardant "getpass.getuser()" afin que ce lieu soit propre à chaque élève.
+- l15, il faut saisir le chemin où seront stockés les fichiers du partage, (il vous vaudra modifier la ligne de code tout en gardant "getpass.getuser()" afin que ce lieu soit propre à chaque élève).
+<br/>
 
 *Pour le test, vous devrez réaliser l'ensemble des modifications précédentes, ainsi que les suivantes qui sont seulement spécifiques au test :*
 Pour le fichier ET prof.txt : 
@@ -90,8 +92,11 @@ Pour le fichier ET prof.txt :
 Pour le fichier ET eleve.txt : 
 - l15, vous pourrez seulement écrire un lieu au choix de votre ordinateur (ex: "C:/Users/antoine/Documents/")
 
-
-
+<br/>
+Attention : Il faut veiller à respecter le chemin des dossiers et fichiers
+<br/>
+Certains nécessitent un / à la fin du chemin alors que d'autres n'en nécessitent pas
+<br/>
 
 Exécution du code :
 -----------------
@@ -140,3 +145,6 @@ La suite du projet :
 Ce projet tel qu'il est ici présenté constitue la deuxième version d'Edu Tool.
 <br/>
 La nouvelle version, Edu Tool v3 est déja en cours de développement et de nouvelles fonctionnalités telles que la possibilité au professeur de partager son écran seront présentes dans cette nouvelle version.
+
+
+
