@@ -103,14 +103,14 @@ Explication du code et explication pour l'utilisation :
 -----------------
 Partie professeur:
 <br/>
-Lors de l'exécution du code, une fenêtre nommé Etu Tool et composé de deux onglets apparait.
+Lors de l'exécution du code, une fenêtre nommée Etu Tool et composée de deux onglets apparait.
 <br/>
-Le professeur peut alors partager des fichiers à ces élèves, dans ce cas il sélectionne un à un les fichiers qu'il souhaite partagés. Il ajoute un titre à son partage puis sélectionne le groupe destinataire des fichiers (ce groupe devra être un de ceux crées précédemment lors de la configuration dans le dossier ET/Classe/). Puis il appuye sur le bouton "Envoyer les fichiers". Cet action aura pour conséquence de copier les documents dans le dossier Partage ainsi que de créer un document appelé partage nom_du_professeur.txt . Quant à lui le bouton "Arrêter le partage" permet de stopper la diffusion des documents et permet de "reset la page". (cela enlève tout l'affichage, et remet la fenetre à l'état initial)
+Le professeur peut alors partager des fichiers à ses élèves, dans ce cas il sélectionne un à un les fichiers qu'il souhaite partager. Il ajoute un titre à son partage puis sélectionne le groupe destinataire des fichiers (ce groupe devra être un de ceux créés précédemment lors de la configuration dans le dossier ET/Classe/). Puis il appuie sur le bouton "Envoyer les fichiers". Cette action aura pour conséquence de copier les documents dans le dossier Partage ainsi que de créer un document appelé partage nom_du_professeur.txt . Quant au bouton "Arrêter le partage", il permet de stopper la diffusion des documents et permet de "reset la page". (cela enlève tout l'affichage, et remet la fenêtre à l'état initial)
 <br/>
 
 
-Le professeur peut également faire réaliser un QCM à sa classe. Dans ce cas, il sélectionne un QCM (QCM qu'il a créer avec le bouton créer un nouveau QCM), sélectionne le groupe qui va réaliser le QCM (ce groupe devra être un de ceux crées précédemment lors de la configuration dans le dossier ET/Classe/). Enfin il envoie le QCM à ses élèves. Cette action copiera le QCM dans le dossier QCM et créera un fichier QCM nom_du_professeur.txt qui contiendra le nom du QCM ainsi que le groupe à qui le QCM est destiné. Enfin quand le professeur rafraichit les réponses de ses élèves, le programme parcours le dossier QCM afin de regarder si un élève a envoyé ses réponses. Dans ce cas il affiche les réponses de l'élève et détermine une note sur 20.
-Le bouton "Réinitialiser le QCM" permet de stopper le QCM, et "reset la page". (cela enlève tout l'affichage, et remet la fenetre à l'état initial)
+Le professeur peut également faire réaliser un QCM à sa classe. Dans ce cas, il sélectionne un QCM (QCM qu'il a créé avec le bouton créer un nouveau QCM), sélectionne le groupe qui va réaliser le QCM (ce groupe devra être un de ceux créés précédemment lors de la configuration dans le dossier ET/Classe/). Enfin il envoie le QCM à ses élèves. Cette action copiera le QCM dans le dossier QCM et créera un fichier QCM nom_du_professeur.txt qui contiendra le nom du QCM ainsi que le groupe auquel le QCM est destiné. Enfin quand le professeur rafraichit les réponses de ses élèves, le programme parcourt le dossier QCM afin de regarder si un élève a envoyé ses réponses. Dans ce cas, il affiche les réponses de l'élève et détermine une note sur 20.
+Le bouton "Réinitialiser le QCM" permet de stopper le QCM, et "reset la page". (cela enlève tout l'affichage, et remet la fenêtre à l'état initial)
 <br/>
 
 
@@ -118,8 +118,8 @@ Partie élève:
 <br/>
 Lors de l'exécution du code, deux fenêtres apparaissent.
 <br/>
-Pour le QCM, si le professeur a envoyer un QCM a ses élèves, alors une fenêtre s’ouvre sur l’ordinateur de l’élève avec en affichage le titre du QCM et l’indication de temps pour la réalisation de ce dernier. Puis l’élève doit saisir son nom et son prénom. Si les deux endroits d’écritures (widget Entry) ne sont pas vides alors l’élève peut cliquer sur « Commencer le QCM », si au moins l’un des deux est vide on affiche « nom et/ou prénom non valide ». L’action de commencer le QCM lance le chronomètre et affiche l’ensemble des questions. 
-Pour chacune des questions, il y a le titre de la question, l’ensemble des réponses proposées, une indication sur le nombre de réponses et un bouton « sauvegarder les réponses ». L’élève, après avoir pris connaissance de la question et de son type (une seule réponse/plusieurs réponses) sélectionne la/les réponses puis clique sur sauvegarder les réponses. Cela enregistre les réponses de l’élève et le bouton « question n » correspondant devient vert. Quand l’élève a fini son QCM et clique sur « soumettre réponses » ou que le temps est écoulé, le programme crée un fichier nommé « nom_QCM id_de_l’eleve.txt », ce fichier est placé dans le dossier QCM, et comporte en première ligne l’identifiant de l’élève, en deuxième ligne le nom de l’élève entré précédemment au début du QCM, le prénom de l’élève entré précédemment au début du QCM puis toutes les réponses aux questions. Enfin la fenêtre est détruite.
+Pour le QCM, si le professeur a envoyé un QCM à ses élèves, alors une fenêtre s’ouvre sur l’ordinateur de l’élève avec en affichage le titre du QCM et l’indication de temps pour la réalisation de ce dernier. Puis l’élève doit saisir son nom et son prénom. Si les deux endroits d’écriture (widget Entry) ne sont pas vides alors l’élève peut cliquer sur « Commencer le QCM »; si au moins l’un des deux est vide on affiche « nom et/ou prénom non valide ». L’action de commencer le QCM lance le chronomètre et affiche l’ensemble des questions. 
+Pour chacune des questions, il y a le titre de la question, l’ensemble des réponses proposées, une indication sur le nombre de réponses et un bouton « sauvegarder les réponses ». L’élève, après avoir pris connaissance de la question et de son type (une seule réponse/plusieurs réponses), sélectionne la/les réponses puis clique sur "Sauvegarder les réponses". Cela enregistre les réponses de l’élève et le bouton « question n » correspondant devient vert. Quand l’élève a fini son QCM et clique sur « Soumettre réponses » ou que le temps est écoulé, le programme crée un fichier nommé « nom_QCM id_de_l’eleve.txt », ce fichier est placé dans le dossier QCM, et comporte en première ligne l’identifiant de l’élève, en deuxième ligne le nom de l’élève entré précédemment au début du QCM, le prénom de l’élève entré précédemment au début du QCM puis toutes les réponses aux questions. Enfin la fenêtre est détruite.
 <br/>
 
 
@@ -129,4 +129,4 @@ La suite du projet :
 -----------------
 Ce projet tel qu'il est ici présenté constitue la deuxième version d'Edu Tool.
 <br/>
-La nouvelle version, Edu Tool v3 est déja en cours de développement et de nouvelles fonctionnalitées tel que la possibilité au professeur de partager son écran seront présentes dans cette nouvelle version.
+La nouvelle version, Edu Tool v3 est déja en cours de développement et de nouvelles fonctionnalités telles que la possibilité au professeur de partager son écran seront présentes dans cette nouvelle version.
