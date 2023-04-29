@@ -105,14 +105,24 @@ Partie professeur:
 <br/>
 Lors de l'exécution du code, une fenêtre nommée Etu Tool et composée de deux onglets apparait.
 <br/>
+
+![imagepartag](https://github.com/Antonytonyy/EduTool/blob/main/Img/Onglet%20partage.png)  
+<br/>
 Le professeur peut alors partager des fichiers à ses élèves, dans ce cas il sélectionne un à un les fichiers qu'il souhaite partager. Il ajoute un titre à son partage puis sélectionne le groupe destinataire des fichiers (ce groupe devra être un de ceux créés précédemment lors de la configuration dans le dossier ET/Classe/). Puis il appuie sur le bouton "Envoyer les fichiers". Cette action aura pour conséquence de copier les documents dans le dossier Partage ainsi que de créer un document appelé partage nom_du_professeur.txt . Quant au bouton "Arrêter le partage", il permet de stopper la diffusion des documents et permet de "reset la page". (cela enlève tout l'affichage, et remet la fenêtre à l'état initial)
 <br/>
 
-
+![imagepartag](https://github.com/Antonytonyy/EduTool/blob/main/Img/Onglet%20QCM.png)  
+<br/>
 Le professeur peut également faire réaliser un QCM à sa classe. Dans ce cas, il sélectionne un QCM (QCM qu'il a créé avec le bouton créer un nouveau QCM), sélectionne le groupe qui va réaliser le QCM (ce groupe devra être un de ceux créés précédemment lors de la configuration dans le dossier ET/Classe/). Enfin il envoie le QCM à ses élèves. Cette action copiera le QCM dans le dossier QCM et créera un fichier QCM nom_du_professeur.txt qui contiendra le nom du QCM ainsi que le groupe auquel le QCM est destiné. Enfin quand le professeur rafraichit les réponses de ses élèves, le programme parcourt le dossier QCM afin de regarder si un élève a envoyé ses réponses. Dans ce cas, il affiche les réponses de l'élève et détermine une note sur 20.
 Le bouton "Réinitialiser le QCM" permet de stopper le QCM, et "reset la page". (cela enlève tout l'affichage, et remet la fenêtre à l'état initial)
 <br/>
 
+![imagepartag](https://github.com/Antonytonyy/EduTool/blob/main/Img/Onglet%20creation%20QCM.png)
+<br/>
+Lorsque le professeur souhaite créer un QCM, il doit d'abord cliquer sur le bouton "Créer un Nouveau QCM", ce qui lui ouvrira une fenetre dans lequel il devra ajouter des questions, des choix, les bonnes réponses serons listés à la suite, exemple ci dessous. Une fois fini, il devra cliquer sur le bouton "Sauvegarder" et une fenêtre s'ouvrira pour lui proposer où enregistrer le fichier. Le QCM sera nommée "QCM nom_du_qcm.txt", les reponses quant à elles seront appelés, "QCM nom_du_qcm co.txt".  
+
+`/!\ Il faut veiller à garder le fichier des réponses dans le même dossier que le fichier du QCM /!\`
+<br/>
 
 Partie élève:
 <br/>
